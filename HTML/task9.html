@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .frame {
+      display: flex;
+    }
+    
+    .vertical {
+      flex-direction: column;
+      flex: 1;
+      border: 1px solid black;
+      padding: 10px;
+      height: 100%;
+    }
+    
+    .horizontal {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      border: 1px solid black;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="vertical">
+      <div class="horizontal">
+        <h1>Frame 1</h1><br>
+        <p>Contents of Frame 1</p>
+      </div>
+      <div class="horizontal">
+        <h1>Frame 2</h1><br>
+        <p>Contents of Frame 2</p>
+      </div>
+    </div>
+    <div class="vertical">
+      <h1>Frame 3</h1>
+        <p>Contents of Frame 3</p>
+    </div>
+    <div class="vertical">
+      <h1>Frame 4</h1>
+        <p>Contents of Frame 4</p>
+    </div>
+  </div>
+</body>
+</html>
