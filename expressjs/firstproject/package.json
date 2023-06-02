@@ -1,0 +1,16 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "express js learning day 1",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Sagar Dutta",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
