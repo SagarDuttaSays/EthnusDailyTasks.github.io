@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+    </head>
+    <body>
+        <div>
+            <h1>LOGIN FORM using get method</h1>
+            <form action="/success" method="GET" onsubmit="return val
+            ()">
+                Username: <input type="text" id="username" name="username" required><br><br>
+                Password: <input type="password" id="pwd" name="pwd" required><br><br>
+                <button type="submit">login</button>
+            </form>
+            <script>
+                function validate() {
+                var username = document.getElementById('username').value;
+                var pwd = document.getElementById('pwd').value;
+                if(username!="" && pwd!="")
+                    return true;
+                else
+                    return false;
+                }
+            </script>
+        </div>
+    </body>
+</html>
