@@ -1,0 +1,100 @@
+//middleware usage when the form method is GET
+var express = require('express');
+var bodyParser = require('body-parser')
+const app = express();
+
+app.set('view engine', 'ejs');
+
+//middleware
+app.get('/', (req, res,next)=>{
+    console.log('welcome');
+    res.render('home');
+});
+
+ app.use('/success', (req,res)=>{
+     username= req.query.username;
+     pwd= req.query.pwd ;
+     console.log('success page');
+     res.send("Username = "+username+" \nPassword = "+pwd); 
+});
+
+app.listen(4000, ()=>{
+    console.log("serving at port 4000");
+})
+
+//middleware usage when the form method is POST
+var express = require('express');
+var bodyParser = require('body-parser')
+const app = express();
+
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended:true}))
+
+//middleware
+app.get('/', (req, res,next)=>{
+    console.log('welcome');
+    res.render('home');
+});
+
+app.use('/success', (req,res)=>{
+    username= req.body.username;
+    pwd= req.body.pwd ;
+    console.log('success page');
+    res.send("Username = "+username+" \nPassword = "+pwd); 
+});
+
+app.listen(4000, ()=>{
+    console.log("serving at port 4000");
+})
+
+//hbs file handling
+var express = require('express');
+var bodyParser = require('body-parser')
+var mongoose = require('mongoose')
+const app = express();
+
+app.set('view engine', 'hbs');
+app.use(bodyParser.urlencoded({extended:true}))
+
+//middleware
+app.get('/', (req, res,next)=>{
+    console.log('welcome');
+    res.render('home');
+});
+
+app.use('/success', (req,res)=>{
+    username= req.body.username;
+    pwd= req.body.pwd ;
+    console.log('success page');
+    res.send("Username = "+username+" \nPassword = "+pwd); 
+});
+
+app.listen(4000, ()=>{
+    console.log("serving at port 4000");
+})
+
+//pug file handling
+var express = require('express');
+var bodyParser = require('body-parser')
+var mongoose = require('mongoose')
+const app = express();
+
+app.set('view engine', 'pug');
+app.use(bodyParser.urlencoded({extended:true}))
+
+//middleware
+app.get('/', (req, res,next)=>{
+    console.log('welcome');
+    res.render('home');
+});
+
+app.use('/success', (req,res)=>{
+    username= req.body.username;
+    pwd= req.body.pwd ;
+    console.log('success page');
+    res.send("Username = "+username+" \nPassword = "+pwd); 
+});
+
+app.listen(4000, ()=>{
+    console.log("serving at port 4000");
+})

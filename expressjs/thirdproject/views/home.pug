@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Form
+  body
+    h1 Form
+    form(action="/success" method="post")
+      label(for="name") Username:
+      input(type="text" name="username" id="username")
+      br
+      label(for="pwd") Password:
+      input(type="password" name="pwd" id="pwd")
+      br
+      input(type="submit" value="Submit")

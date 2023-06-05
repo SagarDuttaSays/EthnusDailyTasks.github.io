@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOME</title>
+    </head>
+    <body>
+        <form action="/success" method="post" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" id="username"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pwd" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            var username = document.getElementById('username').value;
+            var pwd = document.getElementById('pwd').value;
+            if(username!=null && pwd!=null){
+                return true;
+            }
+            else {
+                alert('please fill all the fields');
+                return false;
+            }
+        </script>
+    </body>
+</html>
