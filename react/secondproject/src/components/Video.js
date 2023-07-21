@@ -1,12 +1,20 @@
-function Video({country, bgc}) {
+import Counter from "./Counter";
+import PlayButton from "./PlayButton";
+
+function Video({channel, video_name, verified=false, id, children}) {
     // props.bgc = "red"
     return(
-        <div>
-            <h2 style={{color: bgc}}>Hello {country}</h2>
-            <img 
-            src="https://i.imgur.com/MK3eW3As.jpg"
-            alt="Katherine Johnson"/>
-        </div>
+         <>
+         <div className="col-2">
+    <img className="thumbnail"
+    src={`https://picsum.photos/id/${id}/200/300.jpg`}
+    alt="Katherine Johnson"/>
+    <p className="vd_name">{video_name}</p>
+    <p className="channel_name">{channel} {verified && '✅'}</p>
+    <PlayButton onPause={()=>alert("Paused")} onPlay={()=>alert("Playing")}></PlayButton>
+    <Counter></Counter>
+    </div>
+         </>  
     )
 }
 export default Video;

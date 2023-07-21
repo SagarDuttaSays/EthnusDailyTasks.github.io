@@ -1,15 +1,22 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
-
+.row {
+  margin: auto;
+}
+.thumbnail {
+  width: 90%;
+  height: 40%;
+  border: 5px solid black;
+}
+.vd_name {
+  font-size: medium;
+  font-weight: bold;
+}
+.channel_name{
+  font-size: small;
+}
